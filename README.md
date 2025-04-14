@@ -1,6 +1,6 @@
 # Random Number Pool API
 
-This project provides a random number generation service using a pre-generated pool of random numbers. The pool is initialized from a binary file and supports generating random numbers with or without replacement.
+This project provides a random number generation service using a pre-generated pool of random numbers. The pool is initialized from a archive binary file from RANDOM.ORG and supports generating random numbers with or without replacement.
 
 ## Features
 
