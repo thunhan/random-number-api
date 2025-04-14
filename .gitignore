@@ -14,3 +14,6 @@ logs/
 # OS-specific files
 .DS_Store
 Thumbs.db
+
+# Ignore the docs folder
+docs/
