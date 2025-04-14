@@ -1,0 +1,16 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+
+# Binary files
+random.org-pregenerated-2025-04-bin/*.bin
+
+# OS-specific files
+.DS_Store
+Thumbs.db
