@@ -9,7 +9,7 @@ logs/
 .env
 
 # Binary files
-random.org-pregenerated-2025-04-bin/*.bin
+# random.org-pregenerated-2025-04-bin/*.bin
 
 # OS-specific files
 .DS_Store
