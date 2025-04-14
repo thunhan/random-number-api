@@ -6,7 +6,7 @@ This project provides a random number generation service using a pre-generated p
 
 - Load random numbers from a binary file.
 - Generate random numbers within a specified range.
-- Support for generating numbers with or without replacement.
+- Support for generating numbers with or without replacement. If `true`, the resulting numbers may contain duplicates. If `false`, the numbers will be unique.
 
 ## Project Structure
 
