@@ -1,7 +1,7 @@
 # Random Number Pool API Specification
 
 ## Overview
-This API microservice is designed to generate and manage a pool of random numbers for various lottery and gaming purposes. The random numbers are sourced from binary files located in the `/random.org-pregenerated-2025-04-bin` folder. Each file corresponds to a specific date and contains pre-generated random numbers. The API will read these numbers sequentially to populate the pools. The pool will contain 1 million random numbers, which can be used for different lottery types or dice rolls. The numbers in the pool will be shuffled randomly to ensure unbiased distribution.
+This API microservice is designed to generate and manage a pool of random numbers for various lottery and gaming purposes. The random numbers are sourced from binary files located in the `/random.org-pregenerated-2025-04-bin` folder. Each file corresponds to a specific date and contains pre-generated random numbers. The API will read these numbers sequentially to populate the pools. The pool will contain 260,000 random numbers, which can be used for different lottery types or dice rolls. The numbers in the pool will be shuffled randomly to ensure unbiased distribution.
 
 ---
 
