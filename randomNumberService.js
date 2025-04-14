@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const POOL_SIZE = 1000000;
+const POOL_SIZE = 260000; // Equivalent to 1MB of random numbers
 const RANDOM_NUMBERS_FILE = path.join(__dirname, 'random.org-pregenerated-2025-04-bin', '2025-04-14.bin');
 
 let randomNumberPool = [];
