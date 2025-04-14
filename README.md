@@ -21,21 +21,6 @@ This project provides a random number generation service using a pre-generated p
 2. Run `npm install` to install dependencies.
 3. Ensure the binary file (`2025-04-14.bin`) is present in the `random.org-pregenerated-2025-04-bin/` folder.
 
-## Usage
-
-1. Initialize the random number pool:
-   ```javascript
-   const { initializePool } = require('./randomNumberService');
-   initializePool();
-   ```
-
-2. Generate random numbers:
-   ```javascript
-   const { generateRandomNumbers } = require('./randomNumberService');
-   const numbers = generateRandomNumbers(10, 1, 100, false);
-   console.log(numbers);
-   ```
-
 ## License
 
 This project is licensed under the MIT License.
