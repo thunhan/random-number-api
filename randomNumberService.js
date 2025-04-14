@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const POOL_SIZE = 260000; // Equivalent to 1MB of random numbers
 const RANDOM_NUMBERS_FILE = path.join(__dirname, 'random.org-pregenerated-2025-04-bin', '2025-04-14.bin');
@@ -21,7 +22,9 @@ function loadRandomNumbers() {
 // Shuffle function
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
+        const randomBytes = crypto.randomBytes(4);
+        const randomValue = randomBytes.readUInt32BE(0);
+        const j = randomValue % (i + 1);
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
