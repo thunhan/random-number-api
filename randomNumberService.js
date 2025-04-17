@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 
-const POOL_SIZE = 260000; // Equivalent to 1MB of random numbers
+const POOL_SIZE = 260_000; // Equivalent to one archived .bin file of 1 MB file size
 const RANDOM_NUMBERS_FILE = path.join(__dirname, 'random.org-pregenerated-2025-04-bin', '2025-04-14.bin');
 
 let randomNumberPool = [];
