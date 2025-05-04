@@ -9,6 +9,14 @@ const PORT = 3000;
 // Middleware
 app.use(bodyParser.json());
 
+// Add a fallback to handle undefined req.body
+app.use((req, res, next) => {
+    if (!req.body) {
+        req.body = {};
+    }
+    next();
+});
+
 // Middleware to check API key
 app.use((req, res, next) => {
     const { apiKey } = req.body;
@@ -40,6 +48,10 @@ app.post('/random-numbers', (req, res) => {
         res.status(400).json({ error: error.message });
     }
 });
+
+app.get('/', (req, res) => {
+    res.send('API is running...');
+  });
 
 // Start server
 app.listen(PORT, () => {
