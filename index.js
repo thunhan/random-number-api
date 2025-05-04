@@ -1,12 +1,25 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { initializePool, generateRandomNumbers } = require('./randomNumberService');
+require('dotenv').config();
 
 const app = express();
 const PORT = 3000;
 
 // Middleware
 app.use(bodyParser.json());
+
+// Middleware to check API key
+app.use((req, res, next) => {
+    const { apiKey } = req.body;
+    const validApiKey = process.env.API_KEY;
+
+    if (!apiKey || apiKey !== validApiKey) {
+        return res.status(403).json({ error: 'Forbidden: Invalid or missing API key.' });
+    }
+
+    next();
+});
 
 // API endpoint: POST /random-numbers
 app.post('/random-numbers', (req, res) => {
